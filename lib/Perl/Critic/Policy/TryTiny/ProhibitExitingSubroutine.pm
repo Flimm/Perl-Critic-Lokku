@@ -95,14 +95,14 @@ sub _check_block {
             if ( $element->type eq 'for' || $element->type eq 'foreach') {
                 my ($subblock) = grep { $_->isa('PPI::Structure::Block') } $element->schildren;
                 $subblock->find_any(sub { $wanted->(@_, 1, $in_sub_block) });
-                return undef;
+                return;
             }
         }
         elsif ($element->isa("PPI::Structure::Block")) {
             my $prev_sib = $element->sprevious_sibling;
             if ($prev_sib && $prev_sib->isa("PPI::Token::Word") && $prev_sib eq 'sub') {
                 $element->find_any(sub { $wanted->(@_, $in_for_loop, 1) });
-                return undef;
+                return;
             }
         }
         elsif ($element->isa('PPI::Token::Word')) {
