@@ -13,8 +13,15 @@ see if you could use any.
 
 =head1 DESCRIPTION
 
-Currently, this distribution only contains policies that check for gotchas
-about L<Try::Tiny>.
+This distribution only contains policies that check for gotchas about
+L<Try::Tiny>.
+
+=head1 ABANDONED
+
+This distribution is abandoned. Please do not expect to see any updates. The
+code is is free software; you can redistribute it and/or modify it under the
+same terms as the Perl 5 programming language system itself. Please feel free
+to copy this code and release it yourself, just don't use the Lokku name.
 
 =head2 TryTiny policies
 
